@@ -37,10 +37,13 @@ pipeline {
                 sh "mvn test"
             }
         }
-        stage('Build'){
-            steps{
-                sh "docker build -t IMAGE_NAME "
+         stage("Build & Push Docker Image") {
+            steps {
+                script {
+                   
+                        docker_image = docker.build "${IMAGE_NAME}"
+                }
             }
-        }
+         }
     }
 }

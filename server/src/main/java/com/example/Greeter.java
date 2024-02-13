@@ -9,7 +9,11 @@ public class Greeter {
    * This is a constructor.
    */
   public Greeter() {
-    System.out.println("Hello!!");
+  
+  }
+
+  public void fn(){
+    System.out.println("Hello world");
   }
 
   //TODO: Add javadoc comment

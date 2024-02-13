@@ -6,9 +6,9 @@ pipeline {
     }
 
     triggers{
-        pollSCM('* * * * *')
+        pollSCM('H/10 * * * *')
     }
-    
+
     environment {
             APP_NAME = "register-app-pipeline"
             RELEASE = "1.0.0"

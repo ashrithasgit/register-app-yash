@@ -12,9 +12,7 @@ public class Greeter {
   
   }
 
-  public void fn(){
-    System.out.println("Hello world");
-  }
+
 
   //TODO: Add javadoc comment
   public String greet(String someone) {

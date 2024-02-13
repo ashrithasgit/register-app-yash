@@ -4,6 +4,11 @@ pipeline {
         jdk 'Java17'
         maven 'Maven3'
     }
+
+    triggers{
+        pollSCM('* * * * *')
+    }
+    
     environment {
             APP_NAME = "register-app-pipeline"
             RELEASE = "1.0.0"

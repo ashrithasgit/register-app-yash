@@ -6,7 +6,7 @@ pipeline {
     }
 
     triggers{
-        pollSCM('H/10 * * * *')
+        pollSCM('H/2 * * * *')
     }
 
     environment {

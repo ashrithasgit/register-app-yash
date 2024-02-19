@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 pipeline {
 
 	agent any
@@ -8,4 +7,3 @@ pipeline {
 		maven 'Maven3'
 	}
 }
->>>>>>> Stashed changes

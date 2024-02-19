@@ -5,6 +5,11 @@ pipeline {
 		jdk 'Java17'
 		maven 'Maven3'
 	}
+	
+
+	triggers{
+		pollSCM{'H/2 * * * *'}
+	}
 
 	stages{
 		stage("Clean Workspace"){

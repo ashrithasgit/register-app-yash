@@ -59,8 +59,10 @@ pipeline {
 		}
 		stage("Docker logout"){
 			steps{
+				script{
 				docker.withRegistry('',DOCKER_PASS){
 					sh 'docker logout'
+				}
 				}
 			}
 		}	

@@ -12,7 +12,7 @@ pipeline {
 		DOCKER_PASS = 'dockerhub'
 		IMAGE_NAME = "${DOCKER_USER}" + "@" + "${APP_NAME}"
 		IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
-		DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
 	}
 
 
@@ -52,7 +52,6 @@ pipeline {
 					docker.withRegistry('',DOCKER_PASS){
                                         docker_image.push("${IMAGE_TAG}") 
 					docker_image.push('latest')
-					registryUrl 'https://index.docker.io/v1/'
 				}
                         }
 

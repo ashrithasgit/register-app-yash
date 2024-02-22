@@ -52,10 +52,17 @@ pipeline {
 					docker.withRegistry('',DOCKER_PASS){
                                         docker_image.push("${IMAGE_TAG}") 
 					docker_image.push('latest')
-				}
-                        }
+					}
+                        	}
 
+			}
 		}
-	}	
+		stage("Docker logout"){
+			steps{
+				docker.withRegistry('',DOCKER_PASS){
+					sh 'docker logout'
+				}
+			}
+		}	
 }
 }
